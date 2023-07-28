@@ -50,7 +50,7 @@ export class PiePaginaComponent {
         console.log("resultado WS save", data);
         //this.router.navigate(['pagina1/Listar'])
       });
-      this.persona = new Persona()
+      this.carro = new Carro()
       alert("Carrro agregado exitosamente")
     }
 
