@@ -12,14 +12,7 @@ export class CarroService {
 
   constructor(private http: HttpClient) { }
 
-  private apiUrl = 'http://localhost:8080/AParqueaderoWS/rs/clientes/carroG';
-
-  guardarCarro(carro: Carro, cedula: string): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const body = {
-      carro: carro,
-      cedula: cedula
-    };
-    return this.http.post<any>(this.apiUrl, body, { headers: headers })
+  save(carro: Carro) {
+    return this.http.post<any>("http://localhost:8080/AParqueaderoWS/rs/clientes/carroG", carro)
   }
 }

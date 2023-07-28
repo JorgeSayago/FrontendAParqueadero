@@ -46,11 +46,12 @@ export class PiePaginaComponent {
     }
 
     guardarCarro(){
-      this.carroService.guardarCarro(this.carro,this.cedula).subscribe(data => {
+      this.carroService.save(this.carro).subscribe(data => {
         console.log("resultado WS save", data);
         //this.router.navigate(['pagina1/Listar'])
       });
       this.carro = new Carro()
+      this.cedula = ""
       alert("Carrro agregado exitosamente")
     }
 

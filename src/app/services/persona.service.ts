@@ -13,5 +13,4 @@ export class PersonaService {
   save(persona: Persona) {
     return this.http.post<any>("http://localhost:8080/AParqueaderoWS/rs/clientes", persona)
   }
-
 }
