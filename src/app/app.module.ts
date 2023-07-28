@@ -8,6 +8,12 @@ import { CrearClienteComponent } from './Page/crear-cliente/crear-cliente.compon
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { MenuComponent } from './menu/menu.component';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +26,12 @@ import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MatTableModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
