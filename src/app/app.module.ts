@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CrearClienteComponent } from './Page/crear-cliente/crear-cliente.component';
+import { CabeceraComponent } from './cabecera/cabecera.component';
+import { MenuComponent } from './menu/menu.component';
+import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CrearClienteComponent
+    CrearClienteComponent,
+    CabeceraComponent,
+    MenuComponent,
+    PiePaginaComponent
   ],
   imports: [
     BrowserModule,
