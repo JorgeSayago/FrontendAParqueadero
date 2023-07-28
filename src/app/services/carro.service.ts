@@ -15,4 +15,12 @@ export class CarroService {
   save(carro: Carro) {
     return this.http.post<any>("http://localhost:8080/AParqueaderoWS/rs/clientes/carroG", carro)
   }
+
+  saveC(placa: string, cedula: string) {
+    const url = 'http://localhost:8080/demo/rs/clientes/addCarro';
+    const body = { placa: placa, cedula: cedula }; // Crear un objeto con los campos placa y cedula
+    return this.http.put<any>(url, body); // Enviar una solicitud PUT con el objeto body
+  }
+
+  
 }
