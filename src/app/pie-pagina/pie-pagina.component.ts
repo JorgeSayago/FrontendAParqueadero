@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/domain/persona';
 import {  PersonaService } from 'src/app/services/persona.service';
-
+import { Carro } from '../domain/carro';
+import { CarroService } from '../services/carro.service';
 
 @Component({
   selector: 'app-pie-pagina',
@@ -12,8 +13,11 @@ import {  PersonaService } from 'src/app/services/persona.service';
 export class PiePaginaComponent {
 
   persona: Persona = new Persona();
+  carro: Carro = new Carro();
+  cedula : string = "";
+  
 
-  constructor(private personaService: PersonaService,
+  constructor(private personaService: PersonaService,private carroService: CarroService,
     private router: Router) {
 
       let params = this.router.getCurrentNavigation()?.extras.queryParams;
@@ -21,6 +25,8 @@ export class PiePaginaComponent {
         console.log(params)
         this.persona = new Persona()
         this.persona = params['persona']
+        this.carro = new Carro()
+        this.carro = params['carro']
       }
     }
 
@@ -37,6 +43,15 @@ export class PiePaginaComponent {
       alert("Error la cedula ingresada no es correcta")
       this.persona = new Persona()
     }
+    }
+
+    guardarCarro(){
+      this.carroService.guardarCarro(this.carro,this.cedula).subscribe(data => {
+        console.log("resultado WS save", data);
+        //this.router.navigate(['pagina1/Listar'])
+      });
+      this.persona = new Persona()
+      alert("Carrro agregado exitosamente")
     }
 
 }
