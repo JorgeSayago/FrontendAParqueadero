@@ -1,5 +1,28 @@
-<nav class="menu">
+<style>
+    /* Estilos para la lista */
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .menu ul li {
+      display: inline-block; /* Para que los elementos estén en línea */
+      margin-right: 10px; /* Espacio entre elementos */
+    }
+  
+    .menu ul li a {
+      text-decoration: none;
+      color: black;
+      padding: 5px;
+    }
+  </style>
+  
+  <nav class="menu">
     <ul>
-        <li><a routerLink="pagina/crearUsuario">Crear Usuario</a></li>
+      <li><a routerLink="pagina/crearUsuario">Crear Usuario</a></li>
+      <li><a routerLink="pagina/crearCarro">Crear Carro</a></li>
+      <li><a routerLink="pagina/crearTicket">Crear Ticket</a></li>
     </ul>
   </nav>
+  

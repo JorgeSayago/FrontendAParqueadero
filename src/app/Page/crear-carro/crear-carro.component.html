@@ -1,1 +1,44 @@
-<p>crear-carro works!</p>
+<style>
+     
+    
+
+    /* Estilos para el formulario */
+#contact {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilos para los campos de entrada */
+.mat-form-field {
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* Estilos para los botones */
+button {
+  margin-right: 8px;
+}
+
+  </style>
+ 
+ <div id="contact">
+    <h2>Crear Cliente</h2>
+    <form>
+      <mat-form-field class="form-field" >
+        <mat-label>Placa:</mat-label>
+        <input matInput type="text" name="placa" placeholder="Placa..." [(ngModel)]="carro.placa">
+      </mat-form-field>
+  
+      <mat-form-field class="form-field">
+        <mat-label>Marca:</mat-label>
+        <input matInput type="text" name="marca" placeholder="Marca..." [(ngModel)]="carro.marca">
+      </mat-form-field>
+  
+      <mat-form-field class="form-field">
+        <mat-label>Modelo:</mat-label>
+        <input matInput type="text" name="modelo" placeholder="Modelo..." [(ngModel)]="carro.modelo">
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" (click)="guardar()">Crear</button>
+    </form>
+  </div>

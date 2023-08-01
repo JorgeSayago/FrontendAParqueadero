@@ -16,25 +16,23 @@ export class CrearClienteComponent {
     private router: Router){
       let params = this.router.getCurrentNavigation()?.extras.queryParams;
       if(params){
-        console.log(params)
         this.persona = new Persona()
         this.persona = params['persona']
       }
 
   }
   guardar(){
-    console.log(this.persona)
-    if(!isNaN(Number(this.persona.cedula)) && this.persona.cedula.length === 10 ){
+
+    if(!isNaN(Number(this.persona.cedula))&& this.persona.cedula.length  == 10){
       this.personaService.save(this.persona).subscribe(data => {
-        console.log("Resultado WS SAVE", data);
-        this.router.navigate(["paginas/Lista"])
+        console.log("resultado WS save", data);
+        //this.router.navigate(['pagina1/Listar'])
       });
-      this.persona=new Persona()
-      alert("Creado exitosamente")
-  }
-  else{
-    alert("error numero de cedula incompleta o incorrecta")
-    }
-this.persona = new Persona()
-}
+      this.persona = new Persona()
+      alert("Contacto creado exitosamente")
+    }else{
+      alert("Error la cedula ingresada no es correcta")
+      this.persona = new Persona()
+    }
+    }
 }

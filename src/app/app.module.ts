@@ -14,6 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CrearCarroComponent } from './Page/crear-carro/crear-carro.component';
+import { TicketComponent } from './pagina2/ticket/ticket.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CrearCarroComponent } from './Page/crear-carro/crear-carro.component';
     CabeceraComponent,
     MenuComponent,
     PiePaginaComponent,
-    CrearCarroComponent
+    CrearCarroComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,
