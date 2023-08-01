@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { CrearCarroComponent } from './Page/crear-carro/crear-carro.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatButtonModule } from '@angular/material/button';
     CrearClienteComponent,
     CabeceraComponent,
     MenuComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
+    CrearCarroComponent
   ],
   imports: [
     BrowserModule,
