@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CrearCarroComponent } from './Page/crear-carro/crear-carro.component';
 import { TicketComponent } from './pagina2/ticket/ticket.component';
+import { ListaLugarParqueaderoComponent } from './Page/lista-lugar-parqueadero/lista-lugar-parqueadero.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TicketComponent } from './pagina2/ticket/ticket.component';
     MenuComponent,
     PiePaginaComponent,
     CrearCarroComponent,
-    TicketComponent
+    TicketComponent,
+    ListaLugarParqueaderoComponent
   ],
   imports: [
     BrowserModule,
