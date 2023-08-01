@@ -16,10 +16,8 @@ export class CarroService {
     return this.http.post<any>("http://localhost:8080/AParqueaderoWS/rs/clientes/carroG", carro)
   }
 
-  saveC(placa: string, cedula: string) {
-    const url = 'http://localhost:8080/demo/rs/clientes/addCarro';
-    const body = { placa: placa, cedula: cedula }; // Crear un objeto con los campos placa y cedula
-    return this.http.put<any>(url, body); // Enviar una solicitud PUT con el objeto body
+  saveC(persona:Persona, cedula: string) {
+    return this.http.get<any>("http://localhost:8080/AParqueaderoWS/rs/clientes/carroG/"+persona.cedula +"/"+cedula)
   }
 
   

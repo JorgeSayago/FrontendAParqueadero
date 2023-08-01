@@ -50,10 +50,6 @@ export class PiePaginaComponent {
         console.log("resultado WS save", data);
         //this.router.navigate(['pagina1/Listar'])
       });
-      this.carroService.saveC(this.carro.placa,this.cedula).subscribe(data => {
-        console.log("resultado WS save", data);
-        //this.router.navigate(['pagina1/Listar'])
-      });
       this.carro = new Carro()
       this.cedula = ""
       alert("Carrro agregado exitosamente")
