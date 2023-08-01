@@ -9,10 +9,36 @@
   width: 100%;
   overflow-x: auto;
 }
+
+.verde {
+  color: green;
+  font-weight: bold;
+}
+
+.rojo {
+  color: red;
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  margin-top: 30px;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
 </style>
 
 <div class="container">
-    <h2>Materias</h2>
+    <h2>Lugares Parqueadero</h2>
+    <br>
     <table mat-table [dataSource]="listadoLugaresWS">
         <!-- Columnas de la tabla -->
         <ng-container matColumnDef="codigo">
@@ -41,7 +67,7 @@
         <ng-container matColumnDef="acciones">
           <th mat-header-cell *matHeaderCellDef>Acciones</th>
           <td mat-cell *matCellDef="let contacto">
-            <a >Seleccionar</a> 
+            <a >Asignar</a> 
             <a></a>
           </td>
         </ng-container>
@@ -50,5 +76,34 @@
         <tr mat-header-row *matHeaderRowDef="['codigo', 'numero', 'piso','disponible', 'acciones']"></tr>
         <tr mat-row *matRowDef="let row; columns: ['codigo', 'numero', 'piso','disponible', 'acciones'];"></tr>
       </table>
+  </div>
+
+
+  <div class="container">
+    <div id="contact">
+      <h2>Crear Ticket</h2>
+      <form>
+        <mat-form-field class="form-field" >
+          <mat-label>Placa:</mat-label>
+          <input matInput type="text" name="placa" placeholder="Placa Carro..." >
+        </mat-form-field>
+    
+        <mat-form-field class="form-field">
+          <mat-label>Cedula:</mat-label>
+          <input matInput type="text" name="Cedula" placeholder="Cedula Cliente..." >
+        </mat-form-field>
+    
+        <mat-form-field class="form-field">
+          <mat-label>Codigo Sitio:</mat-label>
+          <input matInput type="text" name="codigo" placeholder="Codigo..." >
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <mat-label>Hora Ingreso</mat-label>
+          <input matInput [type]="'time'" placeholder="Seleccionar hora">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary">Crear Ticket</button>
+      </form>
+    </div>
   </div>
   

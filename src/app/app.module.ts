@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CrearCarroComponent } from './Page/crear-carro/crear-carro.component';
 import { TicketComponent } from './pagina2/ticket/ticket.component';
 import { ListaLugarParqueaderoComponent } from './Page/lista-lugar-parqueadero/lista-lugar-parqueadero.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ListaLugarParqueaderoComponent } from './Page/lista-lugar-parqueadero/l
     HttpClientModule,
     MatTableModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
