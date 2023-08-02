@@ -34,6 +34,4 @@ guardar(){
   });
   this.ticket = new Ticket();
 }
-
-
 }
