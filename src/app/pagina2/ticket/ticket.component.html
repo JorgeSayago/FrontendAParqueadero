@@ -90,20 +90,25 @@
     
         <mat-form-field class="form-field">
           <mat-label>Cedula:</mat-label>
-          <input matInput type="text" name="Cedula" placeholder="Cedula Cliente..." >
+          <input matInput type="text" name="cedula" placeholder="Cedula Cliente..." [(ngModel)]="ticket.cedula">
         </mat-form-field>
-    
         <mat-form-field class="form-field">
           <mat-label>Codigo Sitio:</mat-label>
-          <input matInput type="text" name="codigo" placeholder="Codigo..." [(ngModel)]="ticket.numeroTicket">
+          <input matInput type="text" name="codigo" placeholder="Codigo..." [(ngModel)]="ticket.lugar">
         </mat-form-field>
+        
         <mat-form-field class="form-field">
-          <mat-label>Hora Ingreso</mat-label>
-          <input matInput [type]="'time'" placeholder="Seleccionar hora">
+          <mat-label>Número Ticket:</mat-label>
+          <input matInput type="text" name="numeroTicket" placeholder="numero..." [(ngModel)]="ticket.numeroTicket">
         </mat-form-field>
+
         <br>
         <button mat-raised-button color="primary" (click)="guardar()">Crear Ticket</button>
       </form>
     </div>
   </div>
   
+<!--<mat-form-field class="form-field">
+          <mat-label>Hora Ingreso</mat-label>
+          <input matInput [type]="'time'" placeholder="Seleccionar hora">
+        </mat-form-field>-->
