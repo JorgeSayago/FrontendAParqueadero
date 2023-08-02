@@ -13,4 +13,8 @@ export class CarroService {
   save(carro: Carro) {
     return this.http.post<any>("http://localhost:8080/AParqueaderoWS/rs/carros", carro)
   }
+
+  getAll(){
+    return this.http.get<any>("http://localhost:8080/AParqueaderoWS/rs/carros/all");
+   }
 }
