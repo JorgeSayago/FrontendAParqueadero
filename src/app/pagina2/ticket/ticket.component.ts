@@ -31,6 +31,7 @@ ngOnInit(): void {
 guardar(){
   this.ticketService.save(this.ticket).subscribe(data => {
     console.log("Resultado WS SAVE", data);
+    console.log(this.ticket)
   });
   this.ticket = new Ticket();
 }
