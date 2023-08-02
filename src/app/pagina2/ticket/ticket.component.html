@@ -85,22 +85,22 @@
       <form>
         <mat-form-field class="form-field" >
           <mat-label>Placa:</mat-label>
-          <input matInput type="text" name="placa" placeholder="Placa Carro..." [(ngModel)]="ticket.placa">
+          <input matInput type="text" name="placa" placeholder="Placa Carro..." [(ngModel)]="ticket.carro.placa">
         </mat-form-field>
     
         <mat-form-field class="form-field">
           <mat-label>Cedula:</mat-label>
-          <input matInput type="text" name="cedula" placeholder="Cedula Cliente..." [(ngModel)]="ticket.cedula">
+          <input matInput type="text" name="cedula" placeholder="Cedula Cliente..." [(ngModel)]="ticket.persona.cedula">
         </mat-form-field>
         <mat-form-field class="form-field">
           <mat-label>Codigo Sitio:</mat-label>
-          <input matInput type="text" name="codigo" placeholder="Codigo..." [(ngModel)]="ticket.lugar">
+          <input matInput type="text" name="codigo" placeholder="Codigo..." [(ngModel)]="ticket.lugarParqueo.codigo">
         </mat-form-field>
         
-        <mat-form-field class="form-field">
+      <!--  <mat-form-field class="form-field">
           <mat-label>Número Ticket:</mat-label>
           <input matInput type="text" name="numeroTicket" placeholder="numero..." [(ngModel)]="ticket.codigo">
-        </mat-form-field>
+        </mat-form-field>-->
 
         <br>
         <button mat-raised-button color="primary" (click)="guardar()">Crear Ticket</button>
