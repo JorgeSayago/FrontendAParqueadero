@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+<<<<<<< HEAD
 import { Carro } from 'src/app/domain/carro';
 import { LugarParqueo } from 'src/app/domain/lugarParqueo';
 import { Persona } from 'src/app/domain/persona';
+=======
+import { Lugar } from 'src/app/domain/lugar';
+>>>>>>> parent of 0e1d134 (Configuracion)
 import { Ticket } from 'src/app/domain/ticket';
 import { LugarService } from 'src/app/services/lugar.service';
 import { TicketService } from 'src/app/services/ticket.service';
@@ -15,11 +19,15 @@ import { TicketService } from 'src/app/services/ticket.service';
 export class TicketComponent {
 
   ticket: Ticket = new Ticket();
+<<<<<<< HEAD
   persona: Persona=new Persona();
   carro: Carro=new Carro();
   lugarParqueo: LugarParqueo= new LugarParqueo();
 
 
+=======
+  placa: String = '';
+>>>>>>> parent of 0e1d134 (Configuracion)
   listadoLugaresWS:any;
   listadoLugares : LugarParqueo[] = []
 
@@ -29,7 +37,6 @@ export class TicketComponent {
     if(params){
       this.ticket = new Ticket();
       this.ticket = params['ticket']
-      console.log(this.ticket)
     }
   
 }
@@ -39,6 +46,7 @@ ngOnInit(): void {
 }
 
 guardar(){
+<<<<<<< HEAD
 //  console.log(this.placa)
 //  console.log(this.cedula)
  // console.log(this.codigo)
@@ -46,12 +54,16 @@ guardar(){
  this.ticket.persona=this.persona;
  this.ticket.carro=this.carro;
  this.ticket.lugarParqueo=this.lugarParqueo;
+=======
+>>>>>>> parent of 0e1d134 (Configuracion)
   this.ticketService.save(this.ticket).subscribe(data => {
-    console.log("resultado WS save", data);
-    console.log(this.ticket)
-    //this.router.navigate(['pagina1/Listar'])
+    console.log("Resultado WS SAVE", data);
   });
-  this.ticket = new Ticket()
-  alert("Contacto creado exitosamente")
+  this.ticket = new Ticket();
+  this.placa='';
+
+
 }
+
+
 }

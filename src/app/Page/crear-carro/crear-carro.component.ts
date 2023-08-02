@@ -23,15 +23,12 @@ export class CrearCarroComponent {
   }
 
   guardar(){
-    console.log(this.carro.placa)
-    console.log(this.carro.modelo)
-    console.log(this.carro.marca)
       this.carroService.save(this.carro).subscribe(data => {
         console.log("resultado WS save", data);
-        console.log(this.carro)
         //this.router.navigate(['pagina1/Listar'])
       });
       this.carro = new Carro()
       alert("Contacto creado exitosamente")
     }
+
 }
