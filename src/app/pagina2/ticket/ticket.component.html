@@ -85,37 +85,18 @@
       <form>
         <mat-form-field class="form-field" >
           <mat-label>Placa:</mat-label>
-          <input matInput type="text" name="placa" placeholder="Placa Carro..." [(ngModel)]="ticket.carro.placa">
+          <input matInput type="text" name="placa" placeholder="Placa Carro..." [(ngModel)]="ticket.placa">
         </mat-form-field>
     
         <mat-form-field class="form-field">
           <mat-label>Cedula:</mat-label>
-<<<<<<< HEAD
-          <input matInput type="text" name="cedula" placeholder="Cedula Cliente..." [(ngModel)]="ticket.persona.cedula">
-=======
-          <input matInput type="text" name="Cedula" placeholder="Cedula Cliente..." >
->>>>>>> parent of 0e1d134 (Configuracion)
+          <input matInput type="text" name="cedula" placeholder="Cedula Cliente..." [(ngModel)]="ticket.cedula">
         </mat-form-field>
     
         <mat-form-field class="form-field">
           <mat-label>Codigo Sitio:</mat-label>
-<<<<<<< HEAD
-          <input matInput type="text" name="codigo" placeholder="Codigo..." [(ngModel)]="ticket.lugarParqueo.codigo">
+          <input matInput type="text" name="codigo" placeholder="Codigo...">
         </mat-form-field>
-        
-      <!--  <mat-form-field class="form-field">
-          <mat-label>Número Ticket:</mat-label>
-          <input matInput type="text" name="numeroTicket" placeholder="numero..." [(ngModel)]="ticket.codigo">
-        </mat-form-field>-->
-
-=======
-          <input matInput type="text" name="codigo" placeholder="Codigo..." [(ngModel)]="ticket.numeroTicket">
-        </mat-form-field>
-        <mat-form-field class="form-field">
-          <mat-label>Hora Ingreso</mat-label>
-          <input matInput [type]="'time'" placeholder="Seleccionar hora">
-        </mat-form-field>
->>>>>>> parent of 0e1d134 (Configuracion)
         <br>
         <button mat-raised-button color="primary" (click)="guardar()">Crear Ticket</button>
       </form>
