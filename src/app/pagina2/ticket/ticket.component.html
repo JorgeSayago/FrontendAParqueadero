@@ -39,27 +39,27 @@
 <div class="container">
     <h2>Lugares Parqueadero</h2>
     <br>
-    <table mat-table [dataSource]="listadoLugaresWS">
+    <table mat-table [dataSource]="listadoSitiosWS">
         <!-- Columnas de la tabla -->
         <ng-container matColumnDef="codigo">
           <th mat-header-cell *matHeaderCellDef>Codigo</th>
-          <td mat-cell *matCellDef="let lugar">{{ lugar.codigo }}</td>
+          <td mat-cell *matCellDef="let sitio">{{ sitio.ubicacion }}</td>
         </ng-container>
       
         <ng-container matColumnDef="numero">
           <th mat-header-cell *matHeaderCellDef>Numero</th>
-          <td mat-cell *matCellDef="let lugar">{{ lugar.numeroSitio }}</td>
+          <td mat-cell *matCellDef="let sitio">{{ sitio.numeroSitio }}</td>
         </ng-container>
       
         <ng-container matColumnDef="piso">
           <th mat-header-cell *matHeaderCellDef>Piso</th>
-          <td mat-cell *matCellDef="let lugar">{{ lugar.piso }}</td>
+          <td mat-cell *matCellDef="let sitio">{{ sitio.piso }}</td>
         </ng-container>
 
         <ng-container matColumnDef="disponible">
           <th mat-header-cell *matHeaderCellDef>Disponible</th>
-          <td mat-cell *matCellDef="let lugar" [ngClass]="{ 'verde': lugar.estado, 'rojo': !lugar.estado }">
-            {{ lugar.estado ? 'Disponible' : 'No disponible' }}
+          <td mat-cell *matCellDef="let sitio" [ngClass]="{ 'verde': sitio.estado, 'rojo': !sitio.estado }">
+            {{ sitio.estado ? 'Disponible' : 'No disponible' }}
           </td>
         </ng-container>
       
