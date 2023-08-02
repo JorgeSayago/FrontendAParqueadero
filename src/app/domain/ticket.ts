@@ -1,5 +1,5 @@
 export class Ticket{
-    numeroTicket: string ='';
+    codigo: string ='';
     placa:String='';
     cedula:String='';
     lugar:String=''

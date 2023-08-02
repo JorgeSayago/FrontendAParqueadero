@@ -16,7 +16,7 @@ export class TicketComponent {
   ticket: Ticket = new Ticket();
   placa:String = "";
   cedula: String = "";
-  numeroTicket: string ="";
+  codigo: string ="";
   lugar:number=0;
 
   listadoLugaresWS:any;
@@ -40,7 +40,7 @@ ngOnInit(): void {
 guardar(){
   console.log(this.placa)
   console.log(this.cedula)
-  console.log(this.numeroTicket)
+  console.log(this.codigo)
   console.log(this.lugar)
   this.ticketService.save(this.ticket).subscribe(data => {
     console.log("resultado WS save", data);
