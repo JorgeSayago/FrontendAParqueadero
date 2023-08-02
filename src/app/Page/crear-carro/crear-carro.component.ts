@@ -21,7 +21,6 @@ export class CrearCarroComponent {
       }
 
   }
-
   guardar(){
       this.carroService.save(this.carro).subscribe(data => {
         console.log("resultado WS save", data);
@@ -30,5 +29,4 @@ export class CrearCarroComponent {
       this.carro = new Carro()
       alert("Contacto creado exitosamente")
     }
-
 }
