@@ -98,6 +98,11 @@
           <input matInput type="text" name="lugar" placeholder="Lugar Parqueo..." [(ngModel)]="ticket.ubicacion">
         </mat-form-field>
 
+        <mat-form-field class="form-field">
+          <mat-label>Tiempo Aproximado:</mat-label>
+          <input matInput type="text" name="tiempo" placeholder="Tiempo Aproximado..." [(ngModel)]="ticket.tiempo">
+        </mat-form-field>
+
         <br>
         <button mat-raised-button color="primary" (click)="guardar()">Crear Ticket</button>
       </form>
