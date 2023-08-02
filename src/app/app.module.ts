@@ -17,6 +17,7 @@ import { CrearCarroComponent } from './Page/crear-carro/crear-carro.component';
 import { TicketComponent } from './pagina2/ticket/ticket.component';
 import { ListaLugarParqueaderoComponent } from './Page/lista-lugar-parqueadero/lista-lugar-parqueadero.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { ListicketComponent } from './page3/listicket/listicket.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     PiePaginaComponent,
     CrearCarroComponent,
     TicketComponent,
-    ListaLugarParqueaderoComponent
+    ListaLugarParqueaderoComponent,
+    ListicketComponent
   ],
   imports: [
     BrowserModule,
