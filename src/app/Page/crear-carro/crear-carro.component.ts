@@ -27,6 +27,6 @@ export class CrearCarroComponent {
         //this.router.navigate(['pagina1/Listar'])
       });
       this.carro = new Carro()
-      alert("Contacto creado exitosamente")
+      alert("Carro creado exitosamente")
     }
 }

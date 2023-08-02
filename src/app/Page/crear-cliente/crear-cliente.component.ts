@@ -29,7 +29,7 @@ export class CrearClienteComponent {
         //this.router.navigate(['pagina1/Listar'])
       });
       this.persona = new Persona()
-      alert("Contacto creado exitosamente")
+      alert("Cliente creado exitosamente")
     }else{
       alert("Error la cedula ingresada no es correcta")
       this.persona = new Persona()

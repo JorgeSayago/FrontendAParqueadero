@@ -37,5 +37,7 @@ guardar(){
     console.log(this.ticket)
   });
   this.ticket = new Ticket();
+  window.location.reload();
+  alert("Contacto creado exitosamente")
 }
 }
