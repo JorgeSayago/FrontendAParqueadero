@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { Persona } from 'src/app/domain/persona';
 import { PersonaService } from 'src/app/services/persona.service';
 
@@ -41,4 +41,14 @@ reloadPage(){
     }
   )
  }
+
+ editar(Persona: Persona){
+  console.log(Persona)
+  let params: NavigationExtras = {
+    queryParams: {
+      Persona: Persona,
+    }
+  }
+  this.router.navigate(['pagina/ActualizarPersona'], params)
+}
 }

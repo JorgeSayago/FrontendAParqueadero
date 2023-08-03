@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { Carro } from 'src/app/domain/carro';
 import { CarroService } from 'src/app/services/carro.service';
 
@@ -42,4 +42,14 @@ reloadPage(){
     }
   )
  }
+
+ editar(Carro: Carro){
+  console.log(Carro)
+  let params: NavigationExtras = {
+    queryParams: {
+      Carro: Carro,
+    }
+  }
+  this.router.navigate(['pagina/ActualizarCarro'], params)
+}
 }

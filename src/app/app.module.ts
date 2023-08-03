@@ -21,6 +21,8 @@ import { ListicketComponent } from './page3/listicket/listicket.component';
 import { ListaClienteComponent } from './Page/lista-cliente/lista-cliente.component';
 import { ListaCarroComponent } from './Page/lista-carro/lista-carro.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ActualizarCarroComponent } from './Page/actualizar-carro/actualizar-carro.component';
+import { ActualizarPersonaComponent } from './Page/actualizar-persona/actualizar-persona.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MatIconModule } from '@angular/material/icon';
     ListaLugarParqueaderoComponent,
     ListicketComponent,
     ListaClienteComponent,
-    ListaCarroComponent
+    ListaCarroComponent,
+    ActualizarCarroComponent,
+    ActualizarPersonaComponent
   ],
   imports: [
     BrowserModule,
