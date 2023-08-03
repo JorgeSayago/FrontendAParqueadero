@@ -25,4 +25,21 @@ export class ListaCarroComponent {
 ngOnInit(): void {
  this.listadoCarrosWS = this.carroService.getAll();
 }
+
+eliminar(Carro: Carro){
+  this.carroService.delete(Carro).subscribe(data => {
+    console.log("resultado WS save", data);
+    });
+this.reloadPage();
+
+  }
+
+reloadPage(){
+  let currentUrl = this.router.url
+  this.router.navigateByUrl("/", {skipLocationChange: true}).then(
+    () =>{
+      this.router.navigate([currentUrl])
+    }
+  )
+ }
 }

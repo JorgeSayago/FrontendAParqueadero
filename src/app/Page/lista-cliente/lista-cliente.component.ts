@@ -25,4 +25,20 @@ export class ListaClienteComponent {
 ngOnInit(): void {
  this.listadoPersonaWS = this.personaService.getAll();
 }
+eliminar(Persona: Persona){
+  this.personaService.delete(Persona).subscribe(data => {
+    console.log("resultado WS save", data);
+    });
+this.reloadPage();
+
+  }
+
+reloadPage(){
+  let currentUrl = this.router.url
+  this.router.navigateByUrl("/", {skipLocationChange: true}).then(
+    () =>{
+      this.router.navigate([currentUrl])
+    }
+  )
+ }
 }

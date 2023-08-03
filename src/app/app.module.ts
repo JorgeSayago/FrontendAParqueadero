@@ -20,7 +20,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ListicketComponent } from './page3/listicket/listicket.component';
 import { ListaClienteComponent } from './Page/lista-cliente/lista-cliente.component';
 import { ListaCarroComponent } from './Page/lista-carro/lista-carro.component';
-
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,8 @@ import { ListaCarroComponent } from './Page/lista-carro/lista-carro.component';
     MatTableModule,
     MatInputModule,
     MatButtonModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

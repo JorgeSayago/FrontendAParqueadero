@@ -16,4 +16,14 @@ export class PersonaService {
   getAll(){
     return this.http.get<any>("http://localhost:8080/AParqueaderoWS/rs/clientes/all");
    }
+
+   delete(Persona: Persona){
+    const url = 'http://localhost:8080/AParqueaderoWS/rs/clientes';
+  return this.http.delete(url, { body: Persona });
+  }
+
+  update(Persona: Persona) {
+    const url = 'http://localhost:8080/AParqueaderoWS/rs/clientes';
+    return this.http.put(url, Persona);
+  }
 }

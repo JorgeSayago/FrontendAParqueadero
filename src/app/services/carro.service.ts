@@ -17,4 +17,14 @@ export class CarroService {
   getAll(){
     return this.http.get<any>("http://localhost:8080/AParqueaderoWS/rs/carros/all");
    }
+
+   delete(Carro: Carro){
+    const url = 'http://localhost:8080/AParqueaderoWS/rs/carros';
+  return this.http.delete(url, { body: Carro });
+  }
+
+  update(Carro: Carro) {
+    const url = 'http://localhost:8080/AParqueaderoWS/rs/carros';
+    return this.http.put(url, Carro);
+  }
 }
